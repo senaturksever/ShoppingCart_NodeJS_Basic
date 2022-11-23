@@ -1,0 +1,24 @@
+extends layout.pug
+
+block content
+        .row
+            if products.length > 0
+                each product in products
+                    .col-md-4
+                        .card
+                            .card-body
+                                h4.card-title
+                                    a(href=`/products/${product.id}`) #{product.name}
+                                                
+                                small.text-muted
+                                    i.fas.fa-lira-sign #{product.price}
+                                            
+                            .card-footer.text-center                
+
+                                a(href=`/products/${product.id}`).btn.btn-outline-primary.btn-sm Detay
+
+                                a(href="#").btn.btn-outline-primary.btn-sm.ml-3 Ekle
+            else  
+               h1 No Products                       
+
+            

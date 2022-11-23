@@ -1,0 +1,36 @@
+<!doctype html>
+html(lang="en")
+
+    head
+   
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+        link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css")   
+        link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css")
+        link(rel="stylesheet" href="/css/style.css")
+        block styles
+        title #{title}
+
+    body
+
+        nav.navbar.navbar-expand-lg.navbar-dark.bg-secondary.fixed-top
+            .container
+                a(href="/").navbar-brand NodeJS Case
+                
+                               
+        .container(style='padding-top: 100px;')
+            .row
+                .col-lg-6
+                    .list-group
+                        a(href="/admin/add-product", class=(path==='/admin/add-product'?'nav-link active':'nav-link')) Ürün Ekle 
+                        a(href="/admin/products", class=(path==='/admin/products'?'nav-link active':'nav-link')) Ürün Güncelleme
+                        a(href="/",class=(path==='/products' ? 'nav-link active':'nav-link')) Ürünleri Listele
+                   
+                .col-lg-6
+
+                    block content
+           
+
+            script(src="https://code.jquery.com/jquery-3.3.1.slim.min.js")
+            script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js") 
+            script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js") 
