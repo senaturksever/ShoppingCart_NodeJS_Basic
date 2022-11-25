@@ -14,8 +14,7 @@ exports.getIndex = (req,res,next)=>{
     })
 }
 exports.getProducts = (req, res, next) => {
-    const categories = Category.getAll();
-
+  
     Product.getAll()
         .then(products => {
             res.render('index', {
